@@ -1,0 +1,23 @@
+---
+import { site } from '../data/site';
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
+  <nav class="mx-auto flex max-w-2xl items-center justify-between px-6 py-4">
+    <a href="/" class="text-lg font-semibold text-text transition-colors hover:text-accent">
+      {site.name}
+    </a>
+    <ul class="flex items-center gap-6">
+      {site.nav.map((item) => (
+        <li>
+          <a
+            href={item.url}
+            class="text-sm text-text-muted transition-colors hover:text-text"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
