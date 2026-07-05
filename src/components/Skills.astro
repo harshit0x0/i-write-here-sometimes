@@ -1,0 +1,40 @@
+---
+const skillGroups = [
+  {
+    category: "Languages",
+    skills: ["TypeScript", "JavaScript", "Python", "Go", "Rust"],
+  },
+  {
+    category: "Frontend",
+    skills: ["React", "Astro", "Tailwind CSS", "Vue", "Next.js"],
+  },
+  {
+    category: "Backend",
+    skills: ["Node.js", "PostgreSQL", "Redis", "Docker", "AWS"],
+  },
+  {
+    category: "Tools",
+    skills: ["Git", "Linux", "VS Code", "Figma", "Vim"],
+  },
+];
+---
+
+<section class="border-t border-border px-6 py-24">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="text-2xl font-semibold text-text">Skills</h2>
+    <div class="mt-8 space-y-6">
+      {skillGroups.map((group) => (
+        <div>
+          <h3 class="text-sm font-medium text-text-muted">{group.category}</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {group.skills.map((skill) => (
+              <span class="rounded-full border border-border px-3 py-1 text-sm text-text-muted transition-colors hover:border-accent hover:text-text">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
