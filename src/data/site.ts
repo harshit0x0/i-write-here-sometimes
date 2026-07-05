@@ -1,19 +1,19 @@
 export const site = {
-  name: "Your Name",
-  tagline: "Developer & Creator",
+  name: "Harshit Pandey",
+  tagline: "Developer & Engineer",
   description: "Personal website and blog",
-  url: "https://yourdomain.com",
+  url: "https://harshitlabs.xyz",
 
   author: {
-    name: "Your Name",
-    bio: "I build things for the web. Passionate about clean code, open source, and creating tools that make a difference.",
-    email: "hello@example.com",
+    name: "Harshit",
+    bio: "I build things for the web. Passionate about code, problem solving, and creating tools that make a difference.",
+    email: "hpandey8888@gmail.com",
   },
 
   social: [
-    { name: "GitHub", url: "https://github.com/yourusername" },
+    { name: "GitHub", url: "https://github.com/harshit0x0" },
     { name: "Twitter", url: "https://twitter.com/yourusername" },
-    { name: "LinkedIn", url: "https://linkedin.com/in/yourusername" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/harshit-pandey-032aa6221" },
   ],
 
   nav: [

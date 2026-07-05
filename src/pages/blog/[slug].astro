@@ -30,22 +30,30 @@ function formatDate(date: Date) {
     <article class="mx-auto max-w-2xl">
       <a
         href="/blog"
-        class="text-sm text-text-muted transition-colors hover:text-text"
+        class="inline-flex items-center gap-1 text-sm font-medium text-accent transition-colors hover:text-accent-light"
       >
-        &larr; Back to blog
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to blog
       </a>
       <header class="mt-8">
-        <h1 class="text-3xl font-bold text-text">{post.data.title}</h1>
-        <div class="mt-3 flex items-center gap-4">
+        <h1 class="text-3xl font-bold tracking-tight text-text sm:text-4xl">{post.data.title}</h1>
+        <div class="mt-3 flex items-center gap-3">
           <time class="text-sm text-text-muted">
             {formatDate(post.data.date)}
           </time>
           {post.data.tags.length > 0 && (
-            <div class="flex gap-2">
-              {post.data.tags.map((tag) => (
-                <span class="text-xs text-text-muted">#{tag}</span>
-              ))}
-            </div>
+            <>
+              <span class="text-text-muted">&middot;</span>
+              <div class="flex gap-1.5">
+                {post.data.tags.map((tag) => (
+                  <span class="rounded-md bg-accent-subtle px-2 py-0.5 text-xs font-medium text-accent">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </>
           )}
         </div>
       </header>
@@ -92,7 +100,8 @@ function formatDate(date: Date) {
   }
 
   .prose :global(code) {
-    background-color: var(--bg-secondary);
+    background-color: var(--accent-subtle);
+    color: var(--accent);
     padding: 0.2em 0.4em;
     border-radius: 0.25rem;
     font-size: 0.875em;
@@ -100,29 +109,31 @@ function formatDate(date: Date) {
 
   .prose :global(pre) {
     background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     overflow-x: auto;
     margin-bottom: 1.25em;
   }
 
   .prose :global(pre code) {
     background: none;
+    color: inherit;
     padding: 0;
   }
 
   .prose :global(a) {
-    color: var(--text);
+    color: var(--accent);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
 
   .prose :global(a:hover) {
-    color: var(--accent);
+    color: var(--accent-light);
   }
 
   .prose :global(blockquote) {
-    border-left: 2px solid var(--border);
+    border-left: 3px solid var(--accent);
     padding-left: 1em;
     margin-left: 0;
     margin-bottom: 1.25em;
