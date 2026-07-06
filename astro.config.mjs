@@ -12,7 +12,8 @@ export default defineConfig({
     server: {
       allowedHosts: [
   	    "crestfallenly-phenylene-kaci.ngrok-free.dev",
-  	    "blog.harshitlabs.xyz"
+  	    "blog.harshitlabs.xyz",
+        "harrys-site"
       ]
     },
 
