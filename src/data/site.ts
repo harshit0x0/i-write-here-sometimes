@@ -6,7 +6,7 @@ export const site = {
 
   author: {
     name: "Harshit",
-    bio: "I build things for the web. Passionate about code, problem solving, and creating tools that make a difference.",
+    bio: "I build things for the web. Passionate about code, problem solving, and creating tools that make a difference. When I'm not coding, you'll find me exploring new tech or diving into a good problem to solve.",
     email: "hpandey8888@gmail.com",
   },
 

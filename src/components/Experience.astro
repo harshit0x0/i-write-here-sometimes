@@ -1,22 +1,26 @@
 ---
 const experiences = [
   {
-    role: "Senior Developer",
-    company: "Company Name",
-    period: "2022 - Present",
-    description: "Leading development of scalable web applications and mentoring junior developers.",
+    role: "Backend Developer",
+    company: "Amrutam",
+    period: "Jan 2025 - Present",
+    description: "Building and maintaining backend services for the platform.",
+    highlights: [
+      "Built and maintained RESTful APIs with Node.js and TypeScript",
+      "Integrated push notifications via Firebase Admin SDK",
+      "Implemented image compression across the database using Azure Functions",
+      "Built analytics reports with MongoDB aggregation pipelines",
+    ],
   },
   {
-    role: "Developer",
-    company: "Another Company",
-    period: "2019 - 2022",
-    description: "Built and maintained full-stack applications using modern frameworks.",
-  },
-  {
-    role: "Junior Developer",
-    company: "Startup Inc",
-    period: "2017 - 2019",
-    description: "Started my career building web interfaces and learning best practices.",
+    role: "Freelance Software Developer",
+    company: "Self-employed",
+    period: "Jan 2024 - Dec 2024",
+    description: "Full-stack development for clients and personal projects.",
+    highlights: [
+      "Led end-to-end development of a responsive website for Manroland Sheetfed India using Next.js and TypeScript",
+      "Developed full-stack applications including PUTA Election App and My One Mile",
+    ],
   },
 ];
 ---
@@ -40,6 +44,11 @@ const experiences = [
             </div>
             <p class="mt-0.5 text-sm text-text-muted">{exp.company}</p>
             <p class="mt-2 text-sm leading-relaxed text-text-muted">{exp.description}</p>
+            {exp.highlights && (
+              <ul class="mt-2 list-disc space-y-1 pl-4 text-sm text-text-muted">
+                {exp.highlights.map((h) => <li>{h}</li>)}
+              </ul>
+            )}
           </div>
         </div>
       ))}
